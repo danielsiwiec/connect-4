@@ -3,10 +3,10 @@ install:
 	poetry install
 
 .PHONY: test
-test:
+test: install
 	poetry run pytest
 
 
 .PHONY: run
-run:
+run: install
 	poetry run python -m game.main
